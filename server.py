@@ -17,6 +17,13 @@ def mappage():
     elif request.method == 'GET':
         return render_template('mappage.html')
 
+@app.route('/', methods=['GET', 'POST'])
+def start():
+    if request.method == 'POST':
+        return 'you requested a POST'
+    elif request.method == 'GET':
+        return render_template('homepage.html')
+
 #This code run when this file is call but not when it imported by other file
 if __name__== "__main__":
     #start running the web page
