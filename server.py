@@ -12,6 +12,7 @@ def homepage():
 
 @app.route('/mappage', methods=['POST','GET'])
 def mappage():
+    
     if request.method == 'POST':
         return 'you requested a POST'
     elif request.method == 'GET':
