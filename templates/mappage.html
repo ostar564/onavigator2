@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block head %}
+<script src="https://www.govmap.gov.il/govmap/api/govmap.api.js"></script>
+<script type="text/javascript">
+    $(document).ready(function ()
+    {
+        govmap.createMap('map', 
+            {
+                token: '5a4b8472-b95b-4687-8179-0ccb621c7990',
+                layers: ["GASSTATIONS","PARCEL_HOKS", "KSHTANN_ASSETS", "bus_stops", "PARCEL_ALL"],
+                showXY: true,
+                identifyOnClick: true,
+                isEmbeddedToggle: false,
+                background: "1",
+                layersMode: 1,
+                zoomButtons:false
+            });
+    });
+</script>
+
+{% endblock %}
+{% block body %}
+    <p></p>
+    <div id="map" style="width:600px;height:600px"></div>
+    <!-- <iframe id='ifrMap' frameborder= '0' scrolling= 'no' marginheight= '0' marginwidth= '0' width='70px' height='100px'src= 'https://www.govmap.gov.il/map.html?bb=1&zb=1&in=1&c=183213.2,660928.78&z=7&b=2&lay=CONTOUR' > </iframe> -->
+{% endblock %}
+
+
