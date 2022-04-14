@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/signup.css') }}"/>
+<script type="text/javascript" src="{{ url_for('static', filename='script/signup.js') }}">
+</script>
+
+{% endblock %}
+{% block body %}
+<form  name="registration" method="post" id="form" accept="/" >
+<table id="table">
+<tr>
+    <td>  First Name</td>
+    <td> <input type="text" name="fname" id="fname" /> </td> <td style="color:red" id="fnamecheck"></td>
+</tr>
+<tr>
+    <td>Last Name</td>
+    <td> <input type="text" id="lname" name="lname"/></td><td style="color:red" id="lnamecheck"></td>
+</tr>
+<tr>
+    <td> Birth Day</td>
+    <td><input type="date" name="date" onchange="age2();" id="date"  /></td> <td style="color:red" id="bdaycheck"></td>
+</tr>
+<tr>
+    <td> Calculated Age:</td><td id="age"></td>
+</tr>        
+<tr>
+    <td> Enter username</td>
+    <td><input type="text"name="user" id="user" /></td> <td style="color:red" id="usercheck"></td>
+</tr>
+<tr>
+    <td> Enter Password</td>
+     <td> <input type="password" name="pass" id="pass" /> </td><td style="color:red" id="passcheck"></td>
+</tr>
+<tr>               
+    <td> Gender</td>
+    <td>    
+        <select name="gender">
+        <option value="Male">male</option>
+        <option value="Female">female</option>
+        </select> 
+    </td>                  
+</tr>
+<tr>
+    <td>email address</td>
+    <td><input type="text" name="email" id="email" /></td> <td style ="color:red" id="emailcheck"></td>
+                 
+</tr>
+              
+<tr>
+      <td><input type="submit" id="button" value="sign up!" onclick="return checkall123();" name="submit" /></td>
+
+</tr>
+</table>
+</form>
+{% endblock %}

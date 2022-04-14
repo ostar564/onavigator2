@@ -5,51 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}"/>
-    <style>
-        body {
-        background-color: rgb(33, 211, 42);
-      }
-    </style>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-            <style>
-              
-                ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          background-color: gainsboro;
-        }
-        
-        li {
-          float: left;
-        }
-        
-        li a {
-          display: block;
-          color: black;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-        }
-        
-        li a:hover:not(.active) {
-          background-color: wheat;
-        }
-        
-        .active {
-          background-color: navajowhite;
-        }
-        
-            </style>
-        
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     {% block head %} {% endblock %}     
+
+        
 </head>
 <body>    
     <ul class="w3-bar w3-light-grey w3-border w3-xlarge">
         <li><a href={{url_for('homepage')}} class="fa fa-home">homepage</a></li>
-        <li><a href={{url_for('mappage')}} class="fa fa-file">maps</a></li>
+        <li><a href={{url_for('mappage')}} class="fa fa-map">maps</a></li>
+        <li><a href={{url_for('signup')}} class="fa fa-plane">sign up</a></li>
+
     </ul> 
 
     {% block body%} {% endblock %}   

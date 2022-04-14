@@ -1,0 +1,27 @@
+
+      
+
+#button {
+    background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#table {
+    background-color: gainsboro;
+    position:center;
+    font-size: 16px;
+    font-family:'Comic Sans MS';
+
+}   
+#h {
+               background-color: gainsboro;
+
+}
+
+
+
