@@ -9,30 +9,30 @@
 <form  name="registration" method="post" id="form" accept="/" >
 <table id="table">
 <tr>
-    <td>  First Name</td>
+    <td>  שם פרטי</td>
     <td> <input type="text" name="fname" id="fname" /> </td> <td style="color:red" id="fnamecheck"></td>
 </tr>
 <tr>
-    <td>Last Name</td>
+    <td>שם משפחה</td>
     <td> <input type="text" id="lname" name="lname"/></td><td style="color:red" id="lnamecheck"></td>
 </tr>
 <tr>
-    <td> Birth Day</td>
+    <td> תאריך לידה</td>
     <td><input type="date" name="date" onchange="age2();" id="date"  /></td> <td style="color:red" id="bdaycheck"></td>
 </tr>
 <tr>
-    <td> Calculated Age:</td><td id="age"></td>
+    <td> גיל מחושב</td><td id="age1"></td>
 </tr>        
 <tr>
-    <td> Enter username</td>
+    <td> שם משתמש</td>
     <td><input type="text"name="user" id="user" /></td> <td style="color:red" id="usercheck"></td>
 </tr>
 <tr>
-    <td> Enter Password</td>
+    <td> סיסמה</td>
      <td> <input type="password" name="pass" id="pass" /> </td><td style="color:red" id="passcheck"></td>
 </tr>
 <tr>               
-    <td> Gender</td>
+    <td> מין</td>
     <td>    
         <select name="gender">
         <option value="Male">male</option>
@@ -41,13 +41,14 @@
     </td>                  
 </tr>
 <tr>
-    <td>email address</td>
+    <td>כתובת אי-מייל</td>
     <td><input type="text" name="email" id="email" /></td> <td style ="color:red" id="emailcheck"></td>
                  
 </tr>
               
 <tr>
-      <td><input type="submit" id="button" value="sign up!" onclick="checkall123();" name="submit" /></td>
+    <td></td>
+      <td><input type="submit" id="button" value="הצטרף לחוויה!" onclick="return checkall123();" name="submit" /></td>
 
 </tr>
 </table>

@@ -2,27 +2,13 @@
 {% block head %}
 <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
 <script src="https://www.govmap.gov.il/govmap/api/govmap.api.js"></script>
-<script type="text/javascript">
-    $(document).ready(function ()
-    {
-        govmap.createMap('map', 
-            {
-                token: 'a9f54b55-9f32-45e7-a5cf-0339d8767a1b',
-                layers: ["GASSTATIONS","PARCEL_HOKS", "KSHTANN_ASSETS", "bus_stops", "PARCEL_ALL"],
-                showXY: true,
-                identifyOnClick: true,
-                isEmbeddedToggle: false,
-                background: "1",
-                layersMode: 1,
-                zoomButtons:false
-            });
-    });
-</script>
+<script type="text/javascript" src="{{ url_for('static', filename='script/map.js') }}"></script>
 
 {% endblock %}
 {% block body %}
     <p></p>
     <div id="map" style="width:600px;height:600px"></div>
+    <button onClick="showExample()">Show Example</button>
     <!-- <iframe id='ifrMap' frameborder= '0' scrolling= 'no' marginheight= '0' marginwidth= '0' width='70px' height='100px'src= 'https://www.govmap.gov.il/map.html?bb=1&zb=1&in=1&c=183213.2,660928.78&z=7&b=2&lay=CONTOUR' > </iframe> -->
 {% endblock %}
 
