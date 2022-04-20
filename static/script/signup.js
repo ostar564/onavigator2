@@ -2,14 +2,14 @@ var alphaExp = /^[a-zA-Z]+$/; //אלף בית
 var hebrew = "אבגדה םןץףוזחטיכלמנסעפצקרשת"//בדיקת עברית
 var sign = "!@#$%^&*()_+=-|\/?';,..`~"
 function checkall123() {
+    console.log("1")
     var a = checkdate(); //כל הפונקציות
     var b = checkmylname(); //בדיקת שפ המשפחה
     var c = checkmyfname();//בדיקת שם פרטי
-    var e = usrrnamecheck();// בדיקת שם משתמש
     var f = passcheck(); //בדיקת סיסמה
     var g = emailcheck();// בדיקת אי- מייל
 
-    return a && b && c && e && f && g; //נחזיר את הפונקציות
+    return a && b && c && f && g; //נחזיר את הפונקציות
 }
 function age2() {
     var date = new Date(); //התאריך היום

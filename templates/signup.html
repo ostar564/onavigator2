@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename='style/signup.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='style/form.css') }}"/>
 <script type="text/javascript" src="{{ url_for('static', filename='script/signup.js') }}">
 </script>
-
 {% endblock %}
 {% block body %}
+<div class="content">
 <form  name="registration" method="post" id="form" accept="/" >
 <table id="table">
 <tr>
@@ -24,17 +24,13 @@
     <td> גיל מחושב</td><td id="age1"></td>
 </tr>        
 <tr>
-    <td> שם משתמש</td>
-    <td><input type="text"name="user" id="user" /></td> <td style="color:red" id="usercheck"></td>
-</tr>
-<tr>
     <td> סיסמה</td>
      <td> <input type="password" name="pass" id="pass" /> </td><td style="color:red" id="passcheck"></td>
 </tr>
 <tr>               
     <td> מין</td>
     <td>    
-        <select name="gender">
+        <select name="gender" id="gender">
         <option value="Male">male</option>
         <option value="Female">female</option>
         </select> 
@@ -53,4 +49,5 @@
 </tr>
 </table>
 </form>
+</div>
 {% endblock %}
